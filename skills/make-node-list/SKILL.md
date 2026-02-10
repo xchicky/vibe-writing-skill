@@ -21,6 +21,7 @@ description: 拆解主题为细粒度节点列表。将用户输入的主题/概
 - 博客文章：轻量级、通俗易读、3000-8000字
 - 教程指南：系统化、带实践、8000-15000字
 - 调研论文：学术性、严谨、10000-20000字
+- 知识学习：系统性学习知识/算法/框架/论文，详细深入讲解
 - 其他：自定义类型
 ```
 
@@ -62,6 +63,12 @@ description: 拆解主题为细粒度节点列表。将用户输入的主题/概
 - 侧重深度分析、学术严谨
 - 节点较细，每节600-1000字
 - 结构：摘要→引言→文献综述→方法→实验→结论→参考文献
+
+**知识学习**（15-25个节点）：
+- 侧重系统性、深度理解、知识体系构建
+- 节点细粒度，每节800-1500字
+- 结构：背景→核心概念→原理深入→实践应用→进阶主题→前沿发展
+- 适合：学习算法（YOLO、DeepSeek）、框架（LangChain）、系统设计、论文精读
 
 ### 4. 输出结果预览
 
@@ -185,6 +192,86 @@ React项目实战：构建完整应用
 参考文献与补充材料
 ```
 
+### 示例4：知识学习 - YOLO算法（20个节点）
+
+**用户输入**："系统学习YOLO目标检测算法"
+**用户选择**：知识学习，20个节点左右
+
+**拆解结果** (`node-list.txt`)：
+```
+YOLO算法简介与目标检测发展历程
+目标检测基础概念：IoU、mAP、NMS详解
+YOLOv1核心思想与网络架构详解
+YOLOv1的损失函数设计与训练策略
+YOLOv2改进点：Batch Normalization与Anchor Boxes
+YOLOv2的Darknet-19网络架构分析
+YOLOv3突破性改进：多尺度预测与特征金字塔
+YOLOv3的Darknet-53网络与残差连接
+YOLOv4与YOLOv5的技术演进对比
+YOLOv8核心创新：解耦头与Anchor-Free设计
+YOLO算法的数据增强策略
+YOLO训练技巧：超参数调优与收敛优化
+YOLO模型部署：ONNX与TensorRT优化
+YOLO在边缘设备上的性能调优
+YOLO应用场景：实时检测与视频分析
+YOLO变体对比：YOLOv6/v7/v9/v10技术特点
+目标检测前沿：Transformer与DETR对比
+YOLO vs 其他算法：Faster R-CNN、SSD性能对比
+YOLO实战：自定义数据集训练完整流程
+YOLO进阶：模型压缩与量化技术
+```
+
+### 示例5：知识学习 - DeepSeek算法（18个节点）
+
+**用户输入**："深度学习DeepSeek大语言模型"
+**用户选择**：知识学习，18个节点左右
+
+**拆解结果** (`node-list.txt`)：
+```
+DeepSeek模型简介与背景
+大语言模型基础架构回顾
+DeepSeek的MoE架构详解：混合专家系统
+DeepSeek的MLA多头潜在注意力机制
+DeepSeek的DeepSeekMoE负载均衡策略
+DeepSeek模型架构与参数规模分析
+DeepSeek的训练数据与预训练策略
+DeepSeek的对齐技术：RLHF与SFT
+DeepSeek的推理效率优化
+DeepSeek与GPT-4、Claude架构对比
+DeepSeek的数学与代码能力评估
+DeepSeek的多语言支持与中文优化
+DeepSeek API使用与调用方法
+DeepSeek本地部署：硬件要求与环境配置
+DeepSeek微调：LoRA与QLoRA实践
+DeepSeek应用场景：RAG与Agent构建
+DeepSeek开源生态与社区资源
+DeepSeek未来发展方向与局限性
+```
+
+### 示例6：知识学习 - LangChain框架（15个节点）
+
+**用户输入**："系统学习LangChain框架"
+**用户选择**：知识学习，15个节点左右
+
+**拆解结果** (`node-list.txt`)：
+```
+LangChain简介与AI Agent开发范式
+LangChain核心概念：Chains、Agents、Tools详解
+LangChain安装与环境配置
+Prompt Templates：模板化提示词管理
+Output Parsers：结构化输出解析
+Chains链式调用：LLMChain与SequentialChain
+Memory模块：对话历史管理与记忆机制
+Agents智能代理：ReAct与Function Calling
+Tools工具箱：内置工具与自定义工具开发
+Retrieval检索：文档加载与向量存储
+RAG实现：结合LangChain与向量数据库
+LangChain Expression Language (LCEL)入门
+LangChain与主流LLM集成：OpenAI、Claude、本地模型
+LangChain实战：构建问答系统
+LangChain进阶：Agent自治与工具编排
+```
+
 ## Scripts
 
 ### `scripts/generate_node_list.py`
@@ -214,4 +301,5 @@ React项目实战：构建完整应用
 | 博客文章 | 5-10 | 3k-8k | 500-1000 | 轻量、通俗、吸引读者 |
 | 教程指南 | 10-15 | 8k-15k | 800-1200 | 系统、渐进、带实践 |
 | 调研论文 | 15-20 | 10k-20k | 600-1000 | 严谨、深度、学术化 |
+| 知识学习 | 15-25 | 12k-25k | 800-1500 | 系统、深入、知识体系 |
 | 技术文档 | 8-12 | 5k-12k | 600-1000 | 精准、简洁、可操作 |
